@@ -59,8 +59,8 @@ app.get("/", (req, res) => {
 app.post("/mail", (req, res) => {
   nodeoutlook.sendEmail({
     auth: {
-      user: "rssmtp@russelsmithgroup.com",
-      pass: "Nigeria*1"
+      user: "iarifayan@russelsmithgroup.com",
+      pass: "Stizzlearif@2"
     },
     from: "iarifayan@russelsmithgroup.com",
     to: req.body.email,
