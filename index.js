@@ -1,14 +1,14 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const nodeoutlook = require("nodejs-nodemailer-outlook");
-// const fs = require("fs");
+const fs = require("fs");
 
-// const sendmail = require("sendmail")({
-//   silent: false,
-//   privateKey: fs.readFileSync("./dkim-private.pem", "utf8"),
-//   keySelector: "mydomainkey",
-//   devHost: "localhost"
-// });
+const sendmail = require("sendmail")({
+  silent: false,
+  privateKey: fs.readFileSync("./dkim-private.pem", "utf8"),
+  keySelector: "mydomainkey",
+  devHost: "localhost"
+});
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
