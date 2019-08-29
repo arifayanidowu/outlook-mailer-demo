@@ -62,6 +62,8 @@ app.post("/mail", (req, res) => {
       user: "iarifayan@russelsmithgroup.com",
       pass: "Stizzlearif@2"
     },
+    port: 465,
+    secure: true,
     from: "iarifayan@russelsmithgroup.com",
     to: req.body.email,
     subject: `Test email to ${req.body.email}`,
