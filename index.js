@@ -17,6 +17,11 @@ app.use(express.json());
 const PORT = process.env.PORT || 4000;
 
 // // Using OutLook365
+
+app.get("/", (req, res) => {
+  res.send("Hello world");
+});
+
 const transport = nodemailer.createTransport({
   service: "Outlook365",
   port: 587,
