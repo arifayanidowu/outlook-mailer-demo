@@ -66,7 +66,7 @@ app.post("/mail", (req, res) => {
     from: "iarifayan@russelsmithgroup.com",
     to: req.body.email,
     subject: `Test email to ${req.body.email}`,
-    text: `This is just a test, so don't be alarmed`,
+    html: `<h3>This is just a test, so don't be alarmed</h3>`,
     onError: e => console.log(e),
     onSuccess: i => res.status(200).send({ msg: i })
   });
