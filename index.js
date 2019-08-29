@@ -62,6 +62,10 @@ app.post("/mail", (req, res) => {
       user: "iarifayan@russelsmithgroup.com",
       pass: "Stizzlearif@2"
     },
+    tls: {
+      rejectUnauthorized: false,
+      ciphers: "SSLv3"
+    },
     // secure: true,
     from: "iarifayan@russelsmithgroup.com",
     to: req.body.email,
