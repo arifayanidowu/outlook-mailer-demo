@@ -23,11 +23,11 @@ app.get("/", (req, res) => {
 });
 
 const transport = nodemailer.createTransport({
-  service: "Outlook365",
+  host: "smtp-mail.outlook.com",
   port: 587,
-  secure: false,
+  secureConnection: false,
   tls: {
-    rejectUnauthorized: false,
+    // rejectUnauthorized: false,
     ciphers: "SSLv3"
   },
   auth: {
