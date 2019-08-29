@@ -69,21 +69,21 @@ app.post("/mail", (req, res) => {
     onError: e => console.log(e),
     onSuccess: i => res.status(200).send({ msg: i })
   });
-  sendmail(
-    {
-      from: "arifayanidowu@gmail.com",
-      to: req.body.email,
-      replyTo: "iarifayan@russelsmithgroup.com",
-      subject: "Mail to test sendmail package",
-      html: `This is just a test so don't be alarmed`
-    },
-    (err, reply) => {
-      if (err) {
-        res.json(err);
-      }
-      res.status(200).json(reply);
-    }
-  );
+  // sendmail(
+  //   {
+  //     from: "arifayanidowu@gmail.com",
+  //     to: req.body.email,
+  //     replyTo: "iarifayan@russelsmithgroup.com",
+  //     subject: "Mail to test sendmail package",
+  //     html: `This is just a test so don't be alarmed`
+  //   },
+  //   (err, reply) => {
+  //     if (err) {
+  //       res.json(err);
+  //     }
+  //     res.status(200).json(reply);
+  //   }
+  // );
 });
 
 app.listen(PORT, () => console.log(`[Server]: running live on port ${PORT}`));
