@@ -63,11 +63,11 @@ app.post("/mail", (req, res) => {
       pass: "Nigeria*2"
     },
     tls: {
-      rejectUnauthorized: false,
+      // rejectUnauthorized: false,
       ciphers: "SSLv3"
     },
     // secure: true,
-    requireTLS: true,
+    // requireTLS: true,
     from: "iarifayan@russelsmithgroup.com",
     to: req.body.email,
     subject: `Test email to ${req.body.email}`,
