@@ -21,7 +21,10 @@ app.post("/mail", (req, res) => {
     text: "Welcome to API playground",
     html: "<strong>Welcome to API playground</strong>"
   };
-  sgMail.send(msg);
+  sgMail
+    .send(msg)
+    .then(res => res.status(200).json({ success: true, msg: res }))
+    .catch(err => res.status(500).json({ success: false, err }));
 });
 
 app.listen(PORT, (req, res) =>
