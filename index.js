@@ -22,7 +22,7 @@ app.post("/mail", (req, res) => {
     to: req.body.email,
     from: "test@example.com",
     subject: "Sending with Twilio SendGrid is Fun",
-    templateId: "d-b623f995f4b346fca48fd2925821808f",
+    templateId: process.env.TEMPLATE_ID,
     dynamic_template_data: {
       subject: "Sending with Twilio SendGrid is Fun",
       name: req.body.username,
