@@ -66,7 +66,7 @@ app.post("/mail", (req, res) => {
       rejectUnauthorized: false,
       ciphers: "SSLv3"
     },
-    // secure: true,
+    secure: false,
     requireTLS: true,
     from: "iarifayan@russelsmithgroup.com",
     to: req.body.email,
