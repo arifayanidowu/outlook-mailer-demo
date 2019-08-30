@@ -12,9 +12,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+require("./config/dbconn");
+
 app.get("/", (req, res) => {
   res.status(200).json({ success: true, msg: `Welcome to API playground.` });
 });
+
+app.use("/", require("./routes/users.route"));
 
 app.post("/mail", (req, res) => {
   sgMail.s;
