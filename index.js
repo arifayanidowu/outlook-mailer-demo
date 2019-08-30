@@ -60,7 +60,7 @@ app.post("/mail", (req, res) => {
   nodeoutlook.sendEmail({
     auth: {
       user: "rssmtp@russelsmithgroup.com",
-      pass: "nigeria*2"
+      pass: "Nigeria*2"
     },
     tls: {
       rejectUnauthorized: false,
