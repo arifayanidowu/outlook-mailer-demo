@@ -24,4 +24,6 @@ app.post("/mail", (req, res) => {
   sgMail.send(msg);
 });
 
-app.listen(PORT, () => console.log(`[Server]: Started on port ${PORT}`));
+app.listen(PORT, (req, res) =>
+  console.log(`[Server]: Started on port ${PORT}`)
+);
